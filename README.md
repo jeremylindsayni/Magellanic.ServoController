@@ -17,19 +17,23 @@ Preliminary requirements
 
     a. Change the Package root node to include the xmlns.iot namespace, and add "iot" to the Ignorable Namespaces, i.e.
 
+    ```xml
     <Package
         xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
         xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
              IgnorableNamespaces="uap mp iot">
+    ```
 
     b. Add the iot:Capability and DeviceCapability to the capabilities node, i.e.
 
+    ```xml
     <Capabilities>
         <iot:Capability Name="lowLevelDevices" />
         <DeviceCapability Name="109b86ad-f53d-4b76-aa5f-821e2ddf2141" />
     </Capabilities>
+    ```
 
 3. In your Windows UWP project:
     a. Open the Reference Manager (to open the reference manager, right click on your project's references and select "Add reference...");
